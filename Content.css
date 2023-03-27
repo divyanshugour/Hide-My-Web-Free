@@ -1,0 +1,25 @@
+.toolbar{
+  height: 40px;
+  background-color: black;
+  width: 400px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: row;
+  padding: 5px 0;
+  
+}
+
+.button{
+  height: 40px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i{
+  font-size: 40px;
+  color: white;
+}
