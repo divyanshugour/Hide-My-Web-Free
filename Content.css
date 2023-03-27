@@ -1,25 +1,74 @@
-.toolbar{
+.toolbar {
   height: 40px;
   background-color: black;
   width: 400px;
   border-radius: 30px;
-  display: flex;
   justify-content: center;
   align-items: space-between;
   flex-direction: row;
   padding: 5px 0;
-  
+  position: relative;
+  z-index: 100000;
+  position: fixed !important;
+  display: flex !important;
+  display: block;
+  top: 87%;
+  left: 35%;
 }
 
-.button{
+.button {
   height: 40px;
   width: 60px;
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex !important;
+  display: block;
+  pointer-events: auto !important;
+  filter: blur(0px) !important;
 }
 
-i{
+#colorpicker{
+  height: 40px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+  display: block;
+  filter: blur(0px) !important;
+}
+
+
+i {
   font-size: 40px;
   color: white;
+}
+
+.hmwc {
+  cursor: pointer;
+  border: solid;
+  border-color: #3e69dc;
+}
+
+.ht {
+  display: none;
+}
+
+.hmwb {
+  filter: blur(8px);
+}
+
+#hide:hover {
+  color: #3e69dc;
+}
+#blur:hover {
+  color: #3e69dc;
+}
+#highlight:hover {
+  color: #3e69dc;
+}
+#hidetitle:hover {
+  color: #3e69dc;
+}
+#done:hover {
+  color: #3e69dc;
 }
