@@ -1,3 +1,7 @@
+Chrome Web Store Link:
+
+https://chrome.google.com/webstore/detail/hide-my-web/oapgmeapgbmdojmelccgekofdepjinpi
+
 Hide, blur, and highlight elements of any webpage with a single click of mouse.
 Hide My Web is an add-on(extension) for web browsers which will help you to hide, blur and highlight any webpage element with a single click of mouse. You can also hide your webpage title with Hide My Web.
 
