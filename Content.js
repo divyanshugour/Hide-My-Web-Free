@@ -263,17 +263,20 @@
     mode = null;
   }
 
-  $(document).on("mouseover.hmw", targetSelector, function () {
+  $(document).on("mouseover.hmw", targetSelector, function (e) {
     if (mode === null || isToolbarElement(this)) {
       return;
     }
+    e.stopPropagation();
+    $(".hmwc").removeClass("hmwc");
     $(this).addClass("hmwc");
   });
 
-  $(document).on("mouseout.hmw", targetSelector, function () {
+  $(document).on("mouseout.hmw", targetSelector, function (e) {
     if (mode === null || isToolbarElement(this)) {
       return;
     }
+    e.stopPropagation();
     $(this).removeClass("hmwc");
   });
 
