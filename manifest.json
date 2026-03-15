@@ -3,7 +3,6 @@
   "name": "Hide My Web",
   "version": "1.1.0",
   "icons": {
-    "16": "hidemyweb.png",
     "48": "hidemyweb-48.png",
     "128": "hidemyweb-128.png"
   },
