@@ -1,46 +1,63 @@
-.toolbar {
-  height: 40px;
-  background-color: black;
-  width: 400px;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: space-between;
-  flex-direction: row;
-  padding: 5px 0;
-  position: relative;
-  z-index: 100000;
-  position: fixed !important;
-  display: flex !important;
-  display: block;
-  top: 87%;
-  left: 35%;
-}
-
-.button {
-  height: 40px;
-  width: 60px;
+.hmw-toolbar {
+  height: 48px;
+  width: min(96vw, 760px);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid #1d1d1d;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex !important;
-  display: block;
+  gap: 4px;
+  position: fixed !important;
+  z-index: 2147483647;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.hmw-button {
+  height: 36px;
+  width: 52px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
   pointer-events: auto !important;
   filter: blur(0px) !important;
 }
 
-#colorpicker{
-  height: 40px;
-  width: 60px;
+#hmw-colorpicker {
+  height: 36px;
+  width: 52px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex !important;
-  display: block;
+  pointer-events: auto !important;
   filter: blur(0px) !important;
 }
 
+#hmw-color-input {
+  width: 36px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
 
-i {
-  font-size: 40px;
+.hmw-button i {
+  font-size: 30px;
   color: white;
+}
+
+.hmw-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .hmwc {
@@ -57,18 +74,46 @@ i {
   filter: blur(8px);
 }
 
-#hide:hover {
+.hmw-button:hover i {
   color: #3e69dc;
 }
-#blur:hover {
-  color: #3e69dc;
+
+.hmw-help-panel {
+  position: fixed;
+  left: 50%;
+  bottom: 74px;
+  transform: translateX(-50%);
+  width: min(94vw, 320px);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  background: rgba(10, 10, 10, 0.95);
+  color: #f2f2f2;
+  font-size: 13px;
+  line-height: 1.25;
+  z-index: 2147483647;
+  display: none;
+  pointer-events: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
-#highlight:hover {
-  color: #3e69dc;
+
+.hmw-help-visible {
+  display: block;
 }
-#hidetitle:hover {
-  color: #3e69dc;
+
+.hmw-help-title {
+  font-weight: 700;
+  margin-bottom: 8px;
 }
-#done:hover {
-  color: #3e69dc;
+
+.hmw-help-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.hmw-help-row i {
+  font-size: 16px;
+  color: #88a8ff;
 }

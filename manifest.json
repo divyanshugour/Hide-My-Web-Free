@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "Hide My Web",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "icons": {
     "16": "hidemyweb.png"
   },
+  "minimum_chrome_version": "114",
   "permissions": ["activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"
@@ -14,6 +15,6 @@
   },
   "description": "Hide, blur, and highlight elements of any webpage with a single click of mouse.",
   "content_security_policy": {
-    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    "extension_pages": "script-src 'self'; object-src 'self';"
   }
 }
