@@ -253,7 +253,7 @@
   }
 
   function cleanup() {
-    $(document).off("mouseover.hmw mouseout.hmw click.hmw");
+    $(document).off("mouseover.hmw mouseout.hmw click.hmw", targetSelector);
     $("#hmw-undo, #hmw-redo, #hmw-reset, #hmw-hide, #hmw-blur, #hmw-highlight, #hmw-hidetitle, #hmw-help, #hmw-done").off("click.hmw");
     $(".hmwc").removeClass("hmwc");
     $(toolbarSelector).remove();
@@ -263,29 +263,18 @@
     mode = null;
   }
 
-  $(document).on("mouseover.hmw", function (e) {
-    if (mode === null) {
+  $(document).on("mouseover.hmw", targetSelector, function () {
+    if (mode === null || isToolbarElement(this)) {
       return;
     }
-    var $target = $(e.target).closest(targetSelector);
-    if ($target.length === 0 || isToolbarElement($target[0])) {
-      return;
-    }
-    if (!$target.hasClass("hmwc")) {
-      $(".hmwc").removeClass("hmwc");
-      $target.addClass("hmwc");
-    }
+    $(this).addClass("hmwc");
   });
 
-  $(document).on("mouseout.hmw", function (e) {
-    if (mode === null) {
+  $(document).on("mouseout.hmw", targetSelector, function () {
+    if (mode === null || isToolbarElement(this)) {
       return;
     }
-    var $target = $(e.target).closest(targetSelector);
-    if ($target.length === 0 || isToolbarElement($target[0])) {
-      return;
-    }
-    $target.removeClass("hmwc");
+    $(this).removeClass("hmwc");
   });
 
   $(document).on("click.hmw", targetSelector, function (e) {

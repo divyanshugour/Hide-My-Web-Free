@@ -1,6 +1,6 @@
 .hmw-toolbar {
   height: 48px;
-  width: fit-content;
+  width: min(96vw, 760px);
   padding: 6px 10px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.92);

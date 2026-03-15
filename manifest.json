@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Hide My Web",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "icons": {
     "16": "hidemyweb.png",
     "48": "hidemyweb-48.png",
